@@ -44,9 +44,9 @@ Edit `docker-compose.yml`:
 environment:
   - TELEGRAM_TOKEN=your_bot_token_here
   - QBIT_HOST=http://localhost:8080  # your qBittorrent IP
-  - QBIT_USER=admin
-  - QBIT_PASS=adminadmin
-  - ALLOWED_CHAT_IDS=-123456789  # your chat ID, or leave empty
+  - QBIT_USER=admin                  # your Qbittorrent Web UI Username
+  - QBIT_PASS=adminadmin             # your Qbittorrent Web UI Password
+  - ALLOWED_CHAT_IDS=-123456789      # your chat ID, or leave empty
 ```
 
 ### 4. Run
@@ -68,16 +68,6 @@ downloads - Show active downloads only
 speed - Current transfer speeds
 help - Show available commands
 ```
-
-## Configuration
-
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `TELEGRAM_TOKEN` | Bot token from @BotFather | *required* |
-| `QBIT_HOST` | qBittorrent Web UI URL | `http://localhost:8080` |
-| `QBIT_USER` | qBittorrent username | `admin` |
-| `QBIT_PASS` | qBittorrent password | `adminadmin` |
-| `ALLOWED_CHAT_IDS` | Comma-separated allowed chat IDs | empty (allow all) |
 
 ## Network Modes
 
