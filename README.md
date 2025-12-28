@@ -2,8 +2,6 @@
 
 A lightweight Telegram bot that reports qBittorrent download status. Runs locally and polls Telegram servers outbound, so no port forwarding or public exposure required.
 
-![Status Screenshot](screenshot.png)
-
 ## Features
 
 - `/status` - Show all torrents with progress bars
@@ -45,7 +43,7 @@ Edit `docker-compose.yml`:
 ```yaml
 environment:
   - TELEGRAM_TOKEN=your_bot_token_here
-  - QBIT_HOST=http://localhost:8080  # or your qBittorrent IP
+  - QBIT_HOST=http://localhost:8080  # your qBittorrent IP
   - QBIT_USER=admin
   - QBIT_PASS=adminadmin
   - ALLOWED_CHAT_IDS=-123456789  # your chat ID, or leave empty
@@ -54,7 +52,7 @@ environment:
 ### 4. Run
 
 ```bash
-docker compose up -d
+docker compose up -d --build
 ```
 
 ### 5. Register Commands (Optional)
@@ -109,7 +107,8 @@ If you need the container to have its own IP:
 networks:
   macvlan:
     external: true
-# ... with ipv4_address specified
+    ipv4_address: 192.168.0.200 # Example IP
+    mac_address: 88:7C:54:6C:53:A3 # If you would also like to specify a MAC address
 ```
 
 ## Group Chat Setup
