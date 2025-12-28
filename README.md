@@ -22,13 +22,21 @@ The bot makes **outbound** HTTPS connections to poll Telegram for messages. qBit
 
 ## Quick Start
 
-### 1. Create a Telegram Bot
+### 1. Clone the Repository
+
+```bash
+cd /opt/docker # or wherever you will be running this project
+git clone https://github.com/YOUR_USERNAME/qbit-telegram-bot.git
+cd qbit-telegram-bot
+```
+
+### 2. Create a Telegram Bot
 
 1. Message [@BotFather](https://t.me/botfather) on Telegram
 2. Send `/newbot` and follow prompts
 3. Copy the API token
 
-### 2. Get Your Chat ID
+### 3. Get Your Chat ID
 
 Send a message to your new bot, then visit:
 ```
