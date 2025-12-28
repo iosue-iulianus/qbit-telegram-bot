@@ -26,7 +26,7 @@ The bot makes **outbound** HTTPS connections to poll Telegram for messages. qBit
 
 ```bash
 cd /opt/docker # or wherever you will be running this project
-git clone https://github.com/YOUR_USERNAME/qbit-telegram-bot.git
+git clone https://github.com/iosue-iulianus/qbit-telegram-bot.git
 cd qbit-telegram-bot
 ```
 
