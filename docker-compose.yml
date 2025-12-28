@@ -1,0 +1,12 @@
+services:
+  qbit-telegram-bot:
+    build: .
+    container_name: qbit-telegram-bot
+    restart: unless-stopped
+    environment:
+      - TELEGRAM_TOKEN=your_bot_token_here
+      - QBIT_HOST=http://localhost:8080
+      - QBIT_USER=admin
+      - QBIT_PASS=adminadmin
+      - ALLOWED_CHAT_IDS=  # comma-separated, leave empty to allow all
+    network_mode: host
